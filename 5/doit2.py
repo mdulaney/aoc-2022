@@ -41,7 +41,7 @@ for l in lines[idx:]:
 
     tmp = stacks[frm][:move]
     stacks[frm] = stacks[frm][move:]
-    stacks[to] = tmp[::-1] + stacks[to]
+    stacks[to] = tmp + stacks[to]
 
     pprint(stacks)
 print(''.join(list(map(lambda x : x[1][0], sorted(stacks.items())))))
